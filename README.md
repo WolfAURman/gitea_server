@@ -8,6 +8,11 @@ wget -O gitea https://dl.gitea.io/gitea/1.16.9/gitea-1.16.9-linux-amd64
 ```bash
 chmod +x gitea
 ```
+
+Install git:
+```bash
+apt install git
+```
 ## Creating the necessary data 
 
 Enter:
@@ -100,6 +105,12 @@ Congratulations! Gitea is installed, you can use it.
 ```bash
 wget -O gitea https://dl.gitea.io/gitea/1.16.9/gitea-1.16.9-linux-amd64
 ```
+
+Установка git:
+```bash
+apt install git
+```
+
 Выдача необходимых привелегий:
 ```bash
 chmod +x gitea
