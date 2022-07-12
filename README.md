@@ -4,6 +4,7 @@
 ```bash
 wget -O gitea https://dl.gitea.io/gitea/1.16.9/gitea-1.16.9-linux-amd64
 ```
+
 ```bash
 chmod +x gitea
 ```
@@ -87,6 +88,105 @@ Then go to your ip address that belongs to the server where your gita is hosted 
 ```bash
 ip_host:3000
 ```
+![Screenshot from 2022-07-12 06-17-25](https://user-images.githubusercontent.com/93985232/178387400-c9ce46f4-fd6c-404b-9354-1455fc6ae041.png)
+In the password field, enter the password that you specified when creating the password in MariaDB!
+Then click install at the bottom of the page and wait for installation.
 
+Congratulations! Gitea is installed, you can use it.
 
 # Установка gitea RU
+## Скачка
+
+```bash
+wget -O gitea https://dl.gitea.io/gitea/1.16.9/gitea-1.16.9-linux-amd64
+```
+Выдача необходимых привелегий:
+```bash
+chmod +x gitea
+```
+
+Создание пользователей и прочего:
+```bash
+adduser \
+   --system \
+   --shell /bin/bash \
+   --gecos 'Git Version Control' \
+   --group \
+   --disabled-password \
+   --home /home/git \
+   git
+```
+
+Создание необходимых папок и выдача разрешений:
+```bash
+mkdir -p /var/lib/gitea/{custom,data,log} && chown -R git:git /var/lib/gitea/ && chmod -R 750 /var/lib/gitea/ && mkdir /etc/gitea && chown root:git /etc/gitea && chmod 770 /etc/gitea
+```
+
+Копирование нашего исполняемого файла:
+```bash
+cp gitea /usr/local/bin/gitea
+```
+
+## Установка машки (MariaDB)
+
+Введите:
+```bash
+apt install mariadb-server
+```
+
+Залогиньтесь в машку:
+```bash
+mysql -u root -p
+```
+
+Создание базы данных:
+```bash
+CREATE DATABASE gitea;
+```
+
+Выдача правил базе данных и создание пароля:
+```bash
+GRANT ALL PRIVILEGES ON gitea.* TO 'gitea'@'localhost' IDENTIFIED BY "Ваш_пароль";
+```
+Сохранение изменений:
+```bash
+FLUSH PRIVILEGES;
+```
+
+Выход с машки:
+```bash
+QUIT;
+```
+
+## Создание файла запуска:
+Enter:
+```bash
+nano /etc/systemd/system/gitea.service
+```
+Вставьте туда данные из этого файла - https://github.com/go-gitea/gitea/blob/main/contrib/systemd/gitea.service
+
+После нажмите:
+```bash
+Ctrl + X
+```
+А так же впишите:
+```bash
+Y
+```
+Вы вышли и сохранили файл который мы создали
+
+## Запуск gitea
+Enter into the terminal:
+```bash
+systemctl enable gitea && systemctl start gitea
+```
+
+После залогиньтесь по ip сервера где стоит ваша gitea введя порт 3000:
+```bash
+ip_host:3000
+```
+![Screenshot from 2022-07-12 06-17-25](https://user-images.githubusercontent.com/93985232/178387400-c9ce46f4-fd6c-404b-9354-1455fc6ae041.png)
+Обязательно введите в поле password ваш пароль что мы создали на этапе ранее, ведь иначе вас не пропустит дальше.
+После посмотрите, полистайте и настройте что вам нужно кроме основных настроек что уже были установлены, и нажмите установка внизу страницы. Ожидайте немного времени, после можете пользоваться
+
+Поздравляю! Gitea установлена, можете использовать.
