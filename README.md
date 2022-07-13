@@ -1,4 +1,35 @@
-# Install gitea | EN
+# Installation gitea by script | EN
+The script, like the instruction itself, implies the use of debian or its forks
+
+Important! This installation involves the use of sqlite, so when configuring from the web interface, install this type of database
+
+Install git:
+```bash
+apt install git -y
+```
+
+Clone this repo:
+```bash
+git clone https://github.com/WolfAURman/gitea_server
+```
+
+Go to the working directory:
+```bash
+cd gitea_server
+```
+
+Make the file executable:
+```bash
+chmod +x install.sh
+```
+
+Important! Run the script from sudo, or use su, and run the script from it. But as practice shows, this is not necessary, and sudo is enough. Run it:
+```bash
+sudo ./install.sh
+```
+Wait for the installation and get a ready server with gitea. You will still need to go to the web interface and finish the setup. Access will be via your server's ip and will be open on port 3000
+
+# Install gitea | manual installation | EN
 
 ## Downloads
 ```bash
@@ -101,7 +132,38 @@ Then click install at the bottom of the page and wait for installation.
 
 Congratulations! Gitea is installed, you can use it.
 
-# Установка gitea RU
+# Установка gitea при помощи скрипта | RU
+Скрипт как и сама инструкция подразумевает использование debian или его форков
+
+Важно! Данная установка подразумевает использование sqlite, поэтому при настройке из веб интерфейса установите именно этот тип базы данных
+
+Установите git:
+```bash
+apt install git -y
+```
+
+Клонируйте данное репо:
+```bash
+git clone https://github.com/WolfAURman/gitea_server
+```
+
+Перейдите в рабочую папку:
+```bash
+cd gitea_server
+```
+
+Сделайте файл исполняемым:
+```bash
+chmod +x install.sh
+```
+
+Важно! Запускайте скрипт от sudo, или же используйте su, и запускайте скрипт из него. Но как показывает практика это не нужно, и хватает sudo. Запустите его командой:
+```bash
+sudo ./install.sh
+```
+Дождитесь установки и получите готовый сервер с gitea. Вам всё так же необходимо будет зайти на веб интерфейс и окончить настройку. Доступ будет по ip вашего сервера и открыт будет на порту 3000
+
+# Установка gitea | ручная установка | RU
 ## Скачка
 
 ```bash
