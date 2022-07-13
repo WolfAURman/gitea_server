@@ -36,6 +36,8 @@ cp gitea /usr/local/bin/gitea
 ```
 
 ## Install mairadb
+Important! If you don't need it for a global project, you can use sqlite, this is selected when running in the browser. If you want to use sqlite, skip this step and move on to the next one!
+
 Enter:
 ```bash
 apt install mariadb-server
@@ -139,6 +141,7 @@ cp gitea /usr/local/bin/gitea
 ```
 
 ## Установка машки (MariaDB)
+Важно! Если вам не нужно для глобального проекта, можете использовать sqlite, это выбирается при запуске в браузере. Если вы хотите использовать sqlite пропустите этот этап и переходите к следующему!
 
 Введите:
 ```bash
