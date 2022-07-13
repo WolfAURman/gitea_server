@@ -1,7 +1,6 @@
 #!/bin/bash
 
 apt update && apt upgrade -y
-apt install git -y
 wget -O gitea https://dl.gitea.io/gitea/1.16.9/gitea-1.16.9-linux-amd64
 chmod +x gitea
 adduser \
