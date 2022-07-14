@@ -1,9 +1,8 @@
 #!/bin/bash
 
-chown -R git:git ~/
+chown -R git:git /
 chown -R git:git /usr
-su git
-gitea dump -c /etc/gitea/app.ini
+su git -c "gitea dump -c /etc/gitea/app.ini"
 mkdir ~/dump
 cp gitea-dump-*.zip ~/dump
 
