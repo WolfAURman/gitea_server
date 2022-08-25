@@ -87,7 +87,7 @@ if grep 'CentOS' /etc/os-release > /dev/null 2>&1 #NAME in /etc/os-release
 
 then
 
-	{dnf update -y && dnf install wget -y
+	dnf update -y && dnf install wget -y
 	wget -O gitea https://dl.gitea.io/gitea/1.17.1/gitea-1.17.1-linux-amd64
 	chmod +x gitea
 	adduser \
