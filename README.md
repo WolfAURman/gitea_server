@@ -142,7 +142,12 @@ Congratulations! Gitea is installed, you can use it.
 
 Важно! Данная установка подразумевает использование sqlite, поэтому при настройке из веб интерфейса установите именно этот тип базы данных
 
-Установите git:
+Установите git (Debian):
+```bash
+apt install git -y
+```
+
+Установите git (CentOS/Fedora/AlmaLinux):
 ```bash
 apt install git -y
 ```
