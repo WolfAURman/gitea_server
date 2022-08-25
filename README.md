@@ -3,9 +3,14 @@ The script, like the instruction itself, implies the use of debian or its forks
 
 Important! This installation involves the use of sqlite, so when configuring from the web interface, install this type of database
 
-Install git:
+Install git (debian):
 ```bash
 apt install git -y
+```
+
+Install git (CentOS/Fedora/AlmaLinux):
+```bash
+dnf install git -y
 ```
 
 Clone this repo:
