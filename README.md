@@ -38,7 +38,7 @@ Wait for the installation and get a ready server with gitea. You will still need
 
 ## Downloads
 ```bash
-wget -O gitea https://dl.gitea.io/gitea/1.16.9/gitea-1.16.9-linux-amd64
+wget -O gitea https://dl.gitea.io/gitea/1.17.2/gitea-1.17.2-linux-amd64
 ```
 
 ```bash
@@ -177,7 +177,7 @@ sudo ./install.sh
 ## Скачка
 
 ```bash
-wget -O gitea https://dl.gitea.io/gitea/1.16.9/gitea-1.16.9-linux-amd64
+wget -O gitea https://dl.gitea.io/gitea/1.17.2/gitea-1.17.2-linux-amd64
 ```
 
 Установка git:
