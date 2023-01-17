@@ -1,3 +1,9 @@
+## Unmaintained
+
+**Please note that this project no longer maintained.**
+
+If you want to use gitea, consider using [podman/docker](https://hub.docker.com/r/gitea/gitea).
+
 # Installation gitea by script | EN
 The script, like the instruction itself, implies the use of debian or its forks
 
